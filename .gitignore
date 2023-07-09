@@ -13,3 +13,4 @@ midnight-tests
 midnight-tune
 /*.exe
 sprt.sh
+.vscode

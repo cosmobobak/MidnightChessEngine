@@ -14,6 +14,7 @@
 #include "tables/transposition_table.h"
 #include "../move_gen/move_generator.h"
 #include "move_ordering/move_ordering.h"
+#include "../uci_interpreter/wdl_model.h"
 
 extern PVSData data;
 

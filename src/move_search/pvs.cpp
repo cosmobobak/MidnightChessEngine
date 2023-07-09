@@ -29,9 +29,10 @@ void update_best_move_results(int sub_depth, bool debug) {
 	for (auto i = 0; i < data.pv.length[0]; i++) {
 		pv[i] = data.pv.table[0][i];
 	}
+	const auto norm_score = data.value * 100 / NORMALISATION_K;
 	if (debug) {
 		std::cout	<< "info depth " << sub_depth << " seldepth " << data.seldepth
-					 <<  " score cp " << data.value << " time " << get_elapsed_time(TimeResolution::Milliseconds)
+					 <<  " score cp " << norm_score << " time " << get_elapsed_time(TimeResolution::Milliseconds)
 					 << " nodes " << data.nodes_searched << " pv " << pv << std::endl;
 	}
 }
